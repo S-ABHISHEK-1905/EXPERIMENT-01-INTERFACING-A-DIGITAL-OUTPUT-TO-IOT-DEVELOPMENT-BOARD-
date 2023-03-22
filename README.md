@@ -78,13 +78,39 @@ The main features of LPC2148 include the following.
 
 
 ## STM 32 CUBE PROGRAM :
+~~~
+void led();  //Function declaration
+int main(void)
+{
+ while (1)
+  {
+	  led();
+  }
+  
+}
+void led()
+{
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	HAL_Delay(3000);
+	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	HAL_Delay(3000);
+}
+
+~~~
 
 
 
 ## Output  :
- 
- 
- 
- 
+
+## LED OFF:
+![led 1](https://user-images.githubusercontent.com/94187572/226975946-6864a337-44d0-44a8-8a86-0b846570ee54.png)
+
+## LED ON:
+![led 2](https://user-images.githubusercontent.com/94187572/226976262-57f7fc17-9a71-491c-8c5e-24fdeca9e8d3.png)
+
+## PROCESS:
+https://user-images.githubusercontent.com/94187572/226976711-048841cc-afcb-4a07-ba4c-8237b7c0444c.mp4
+
+
 ## Result :
 Interfacing a digital output with ARM microcontroller based IOT development is executed and the results are verified.
